@@ -5,15 +5,15 @@
     <!-- package -->
     <id>EraYaN.SkiaSharp.NativeAssets.LinuxArm</id>
     <title>EraYaN.SkiaSharp.NativeAssets.LinuxArm</title>
-    <version>1.68.0</version>
+    <version>1.68.0-fix</version>
     <description>
-	This is a Raspbian tools built ARM32 native library for SkiaSharp.
+	This is a Raspbian tools built ARM32+ARM64 native library for SkiaSharp.
 	
 	SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library.
 	It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.
     </description>
     <summary>
-	This is a Raspbian tools built ARM32 native library for SkiaSharp.
+	This is a Raspbian tools built ARM32+ARM64 native library for SkiaSharp.
 	SkiaSharp is a cross-platform 2D graphics API for .NET platforms that can be used across mobile, server and desktop models to render images.
     </summary>
     <projectUrl>https://github.com/EraYaN/EraYaN.SkiaSharp.NativeAssets.LinuxArm</projectUrl>

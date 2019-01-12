@@ -78,22 +78,22 @@ export PATH="$OLDPATH:`pwd`/${TOOLCHAIN_ARM64}/bin"
 
 # Patch source if not already patched
 if ! patch -R -p0 -s -f --dry-run <patches/aarch64-skia-build-fix.patch; then
-    patch -p0 -b <patches/aarch64-skia-build-fix.patch
+   patch -p0 -b <patches/aarch64-skia-build-fix.patch
 fi
-
+# Debian: apt install libjpeg62-turbo  libexpat1 libfreetype6 libpng16-16 libwebp6 zlib1g
 pushd skia
 
 ./bin/gn gen 'out/linux-arm64' --args='    
     cc = "aarch64-linux-gnu-gcc"
     cxx = "aarch64-linux-gnu-g++"
     is_official_build=true skia_enable_tools=false
-    target_os="linux" target_cpu="aarch64"
+    target_os="linux" target_cpu="arm64"
     skia_use_icu=false skia_use_sfntly=false skia_use_piex=true
     skia_use_system_expat=false skia_use_system_freetype2=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false
     skia_enable_gpu=true
     extra_cflags=[ "-DSKIA_C_DLL", "-flax-vector-conversions" ]
     linux_soname_version=""'
-
+   
 # compile
 ../depot_tools/ninja 'SkiaSharp' -C 'out/linux-arm64'
 
